@@ -17,6 +17,7 @@
 		BC5633662105D59200912BAF /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5633652105D59200912BAF /* Location.swift */; };
 		BC5633682105D69200912BAF /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5633672105D69200912BAF /* LocationTests.swift */; };
 		BC56336B2105D88900912BAF /* ItemManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC56336A2105D88900912BAF /* ItemManagerTests.swift */; };
+		BC56336D2105DB5000912BAF /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC56336C2105DB5000912BAF /* ItemManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		BC5633652105D59200912BAF /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		BC5633672105D69200912BAF /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
 		BC56336A2105D88900912BAF /* ItemManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemManagerTests.swift; sourceTree = "<group>"; };
+		BC56336C2105DB5000912BAF /* ItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			children = (
 				BC5633632105D18400912BAF /* ToDoItem.swift */,
 				BC5633652105D59200912BAF /* Location.swift */,
+				BC56336C2105DB5000912BAF /* ItemManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC5633422105CC4C00912BAF /* ViewController.swift in Sources */,
+				BC56336D2105DB5000912BAF /* ItemManager.swift in Sources */,
 				BC5633402105CC4C00912BAF /* AppDelegate.swift in Sources */,
 				BC5633662105D59200912BAF /* Location.swift in Sources */,
 				BC5633642105D18400912BAF /* ToDoItem.swift in Sources */,
