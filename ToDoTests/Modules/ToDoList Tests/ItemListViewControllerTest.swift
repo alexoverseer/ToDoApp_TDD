@@ -8,7 +8,7 @@ class ItemListViewControllerTest: XCTestCase {
     override func setUp() {
         super.setUp()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController( withIdentifier: "ItemListViewController")
+        let viewController = storyboard.instantiateViewController(withIdentifier: "ItemListViewController")
         sut = viewController as! ItemListViewController
         sut.loadViewIfNeeded()
     }
