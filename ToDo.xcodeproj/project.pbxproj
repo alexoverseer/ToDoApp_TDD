@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC0B3063210764B100648311 /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0B3062210764B100648311 /* APIClientTests.swift */; };
+		BC0B3066210765C000648311 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0B3065210765C000648311 /* APIClient.swift */; };
+		BC0B3068210770D100648311 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0B3067210770D100648311 /* Token.swift */; };
 		BC10542E210729300006C851 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC10542D210729300006C851 /* MapKit.framework */; };
 		BC1054312107300A0006C851 /* InputViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1054302107300A0006C851 /* InputViewControllerTests.swift */; };
 		BC1054342107440E0006C851 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1054332107440E0006C851 /* InputViewController.swift */; };
@@ -41,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC0B3062210764B100648311 /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
+		BC0B3065210765C000648311 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		BC0B3067210770D100648311 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		BC10542D210729300006C851 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BC1054302107300A0006C851 /* InputViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewControllerTests.swift; sourceTree = "<group>"; };
 		BC1054332107440E0006C851 /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +93,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC0B30612107649E00648311 /* API Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BC0B3062210764B100648311 /* APIClientTests.swift */,
+			);
+			path = "API Tests";
+			sourceTree = "<group>";
+		};
+		BC0B3064210765B100648311 /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				BC0B3065210765C000648311 /* APIClient.swift */,
+				BC0B3067210770D100648311 /* Token.swift */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
 		BC10542C210729300006C851 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				BC56333F2105CC4C00912BAF /* AppDelegate.swift */,
+				BC0B3064210765B100648311 /* APIClient */,
 				BC5633622105D17500912BAF /* Models */,
 				BC5633712106000B00912BAF /* Modules */,
 				BC5633432105CC4C00912BAF /* Main.storyboard */,
@@ -180,6 +204,7 @@
 				BCD044542106285D0086DE57 /* ToDoList Tests */,
 				BC654F652107248300CD63BD /* ToDo Detail Tests */,
 				BC10542F21072FCF0006C851 /* ToDo Input Tests */,
+				BC0B30612107649E00648311 /* API Tests */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -348,9 +373,11 @@
 				BC1054342107440E0006C851 /* InputViewController.swift in Sources */,
 				BC56336D2105DB5000912BAF /* ItemManager.swift in Sources */,
 				BCD0444B210605220086DE57 /* ItemListDataProvider.swift in Sources */,
+				BC0B3066210765C000648311 /* APIClient.swift in Sources */,
 				BC5633402105CC4C00912BAF /* AppDelegate.swift in Sources */,
 				BC5633662105D59200912BAF /* Location.swift in Sources */,
 				BCD0445221060E120086DE57 /* ItemCell.swift in Sources */,
+				BC0B3068210770D100648311 /* Token.swift in Sources */,
 				BC5633642105D18400912BAF /* ToDoItem.swift in Sources */,
 				BC5633732106001A00912BAF /* ItemListViewController.swift in Sources */,
 				BC654F6A2107250D00CD63BD /* DetailViewController.swift in Sources */,
@@ -367,6 +394,7 @@
 				BC1054312107300A0006C851 /* InputViewControllerTests.swift in Sources */,
 				BC5633682105D69200912BAF /* LocationTests.swift in Sources */,
 				BC5633702105FFC900912BAF /* ItemListViewControllerTest.swift in Sources */,
+				BC0B3063210764B100648311 /* APIClientTests.swift in Sources */,
 				BC5633612105D08F00912BAF /* ToDoItemTests.swift in Sources */,
 				BC654F672107249900CD63BD /* DetailViewControllerTest.swift in Sources */,
 			);
