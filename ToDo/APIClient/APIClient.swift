@@ -1,5 +1,10 @@
 import Foundation
 
+enum WebserviceError: Error {
+    case DataEmptyError
+    case ResponseError
+}
+
 protocol SessionProtocol {
     func dataTask(with url: URL, completionHandler: @escaping(Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask
 }
@@ -15,8 +20,30 @@ class APIClient {
         guard let url = URL(string:"https://awesometodos.com/login?\(query)") else { fatalError() }
         
         session.dataTask(with: url) { (data, response, error) in
+            guard error == nil else {
+                return completion(nil, error)
+            }
             
-        }
+            guard let data = data else {
+                completion(nil, WebserviceError.DataEmptyError)
+                return
+            }
+            
+            do {
+                let dict = try JSONSerialization.jsonObject(with: data, options: []) as? [String: String]
+                let token: Token?
+                
+                if let tokenString = dict?["token"] {
+                    token = Token(id: tokenString)
+                } else {
+                    token = nil
+                }
+                completion(token, nil)
+                
+            } catch {
+                completion(nil, error)
+            }
+        }.resume()
     }
 }
 
