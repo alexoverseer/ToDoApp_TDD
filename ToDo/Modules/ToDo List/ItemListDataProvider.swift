@@ -6,7 +6,11 @@ enum Section: Int {
     case done
 }
 
-class ItemListDataProvider: NSObject {
+@objc protocol ItemManagerSettable {
+    var itemManager: ItemManager? { get set }
+}
+
+class ItemListDataProvider: NSObject, ItemManagerSettable {
     var itemManager: ItemManager?
 }
 
@@ -77,6 +81,18 @@ extension ItemListDataProvider: UITableViewDelegate {
             return "Check"
         case .done:
             return "Uncheck"
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let itemSection = Section(rawValue: indexPath.section) else { fatalError() }
+        switch itemSection {
+        case .toDo:
+            NotificationCenter.default.post(name: NSNotification.Name("ItemSelectedNotification"),
+                                            object: self,
+                                            userInfo: ["index": indexPath.row])
+        default:
+            break
         }
     }
 }

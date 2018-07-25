@@ -22,9 +22,10 @@ class ItemListDataProviderTests: XCTestCase {
     }
     
     override func tearDown() {
-        super.tearDown()
+        sut.itemManager?.removeAll()
         sut = nil
         tableView = nil
+        super.tearDown()
     }
     
     func test_NumberOfSections_IsTwo() {
@@ -119,6 +120,23 @@ class ItemListDataProviderTests: XCTestCase {
         XCTAssertEqual(sut.itemManager?.doneCount, 0)
         XCTAssertEqual(tableView.numberOfRows(inSection: 0), 1)
         XCTAssertEqual(tableView.numberOfRows(inSection: 1), 0)
+    }
+    
+    func test_SelectingACell_SendsNotification() {
+        let item = ToDoItem(title: "First")
+        sut.itemManager?.add(item)
+        
+        expectation(forNotification: NSNotification.Name("ItemSelectedNotification"),
+                    object: nil) { notification -> Bool in
+                        guard let index = notification.userInfo?["index"] as? Int else {
+                            return false
+                        }
+                        return index == 0
+        }
+        
+        tableView.delegate?.tableView!(tableView, didSelectRowAt: IndexPath(row: 0, section: 0))
+        
+        waitForExpectations(timeout: 3, handler: nil)
     }
 }
 

@@ -8,7 +8,7 @@ class ItemCell: UITableViewCell {
     
     lazy var dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM/dd/yyyy"
+        dateFormatter.dateFormat = "dd/MM/yyyy"
         return dateFormatter
     }()
     

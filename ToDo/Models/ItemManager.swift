@@ -1,12 +1,59 @@
-import Foundation
+import UIKit
 
-class ItemManager {
+class ItemManager: NSObject {
     
     var toDoCount: Int { return toDoItems.count }
     var doneCount: Int { return doneItems.count }
     
     private var toDoItems: [ToDoItem] = []
     private var doneItems: [ToDoItem] = []
+    
+    override init() {
+        super.init()
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(save),
+                                               name: .UIApplicationWillResignActive,
+                                               object: nil)
+        
+        if let nsToDoItems = NSArray(contentsOf: toDoPathURL) {
+            for dict in nsToDoItems {
+                if let toDoItem = ToDoItem(dict: dict as! [String:Any]) {
+                    toDoItems.append(toDoItem)
+                }
+            }
+        }
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+        save()
+    }
+    
+    var toDoPathURL: URL {
+        let fileURLs = FileManager.default.urls(for: .documentDirectory,
+                                                in: .userDomainMask)
+        guard let documentURL = fileURLs.first else {
+            print("Something went wrong. Documents url could not be found")
+            fatalError()
+        }
+        return documentURL.appendingPathComponent("toDoItems.plist")
+    }
+    
+    @objc func save() {
+        let nsToDoItems = toDoItems.map { $0.plistDict }
+        guard nsToDoItems.count > 0 else {
+            try? FileManager.default.removeItem(at: toDoPathURL)
+            return
+        }
+        do {
+            let plistData = try PropertyListSerialization.data(fromPropertyList: nsToDoItems,
+                                                               format: PropertyListSerialization.PropertyListFormat.xml,
+                                                               options: PropertyListSerialization.WriteOptions(0))
+            try plistData.write(to: toDoPathURL, options: Data.WritingOptions.atomic)
+        } catch {
+            print("🔥🔥🔥 \(error)")
+        }
+    }
     
     func add(_ item: ToDoItem) {
         if !toDoItems.contains(item) {
