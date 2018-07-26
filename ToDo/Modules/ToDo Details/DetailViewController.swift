@@ -46,6 +46,7 @@ final class DetailViewController: UIViewController {
     @IBAction func checkItem() {
         if let itemInfo = itemInfo {
             itemInfo.manager.checkItem(at: itemInfo.itemPosition)
+            navigationController?.popViewController(animated: true)
         }
     }
 }

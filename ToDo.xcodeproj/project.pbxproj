@@ -14,6 +14,7 @@
 		BC1054312107300A0006C851 /* InputViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1054302107300A0006C851 /* InputViewControllerTests.swift */; };
 		BC1054342107440E0006C851 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1054332107440E0006C851 /* InputViewController.swift */; };
 		BC2FB60C2108767900E793D8 /* StoryboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FB60B2108767900E793D8 /* StoryboardTests.swift */; };
+		BC4CD27E2108C8BD006E12CB /* ToDoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4CD27D2108C8BD006E12CB /* ToDoUITests.swift */; };
 		BC5633402105CC4C00912BAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC56333F2105CC4C00912BAF /* AppDelegate.swift */; };
 		BC5633452105CC4C00912BAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5633432105CC4C00912BAF /* Main.storyboard */; };
 		BC5633472105CC4E00912BAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC5633462105CC4E00912BAF /* Assets.xcassets */; };
@@ -35,6 +36,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		BC4CD2802108C8BD006E12CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC5633342105CC4C00912BAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC56333B2105CC4C00912BAF;
+			remoteInfo = ToDo;
+		};
 		BC5633512105CC4E00912BAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BC5633342105CC4C00912BAF /* Project object */;
@@ -52,6 +60,9 @@
 		BC1054302107300A0006C851 /* InputViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewControllerTests.swift; sourceTree = "<group>"; };
 		BC1054332107440E0006C851 /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 		BC2FB60B2108767900E793D8 /* StoryboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardTests.swift; sourceTree = "<group>"; };
+		BC4CD27B2108C8BD006E12CB /* ToDoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC4CD27D2108C8BD006E12CB /* ToDoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoUITests.swift; sourceTree = "<group>"; };
+		BC4CD27F2108C8BD006E12CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC56333C2105CC4C00912BAF /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC56333F2105CC4C00912BAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC5633442105CC4C00912BAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -77,6 +88,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BC4CD2782108C8BD006E12CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BC5633392105CC4C00912BAF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -144,11 +162,21 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
+		BC4CD27C2108C8BD006E12CB /* ToDoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BC4CD27D2108C8BD006E12CB /* ToDoUITests.swift */,
+				BC4CD27F2108C8BD006E12CB /* Info.plist */,
+			);
+			path = ToDoUITests;
+			sourceTree = "<group>";
+		};
 		BC5633332105CC4C00912BAF = {
 			isa = PBXGroup;
 			children = (
 				BC56333E2105CC4C00912BAF /* ToDo */,
 				BC5633532105CC4E00912BAF /* ToDoTests */,
+				BC4CD27C2108C8BD006E12CB /* ToDoUITests */,
 				BC56333D2105CC4C00912BAF /* Products */,
 				BC10542C210729300006C851 /* Frameworks */,
 			);
@@ -159,6 +187,7 @@
 			children = (
 				BC56333C2105CC4C00912BAF /* ToDo.app */,
 				BC5633502105CC4E00912BAF /* ToDoTests.xctest */,
+				BC4CD27B2108C8BD006E12CB /* ToDoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -277,6 +306,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		BC4CD27A2108C8BD006E12CB /* ToDoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC4CD2842108C8BD006E12CB /* Build configuration list for PBXNativeTarget "ToDoUITests" */;
+			buildPhases = (
+				BC4CD2772108C8BD006E12CB /* Sources */,
+				BC4CD2782108C8BD006E12CB /* Frameworks */,
+				BC4CD2792108C8BD006E12CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC4CD2812108C8BD006E12CB /* PBXTargetDependency */,
+			);
+			name = ToDoUITests;
+			productName = ToDoUITests;
+			productReference = BC4CD27B2108C8BD006E12CB /* ToDoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		BC56333B2105CC4C00912BAF /* ToDo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC5633592105CC4E00912BAF /* Build configuration list for PBXNativeTarget "ToDo" */;
@@ -322,6 +369,10 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Bananaland;
 				TargetAttributes = {
+					BC4CD27A2108C8BD006E12CB = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = BC56333B2105CC4C00912BAF;
+					};
 					BC56333B2105CC4C00912BAF = {
 						CreatedOnToolsVersion = 9.4.1;
 						SystemCapabilities = {
@@ -352,11 +403,19 @@
 			targets = (
 				BC56333B2105CC4C00912BAF /* ToDo */,
 				BC56334F2105CC4E00912BAF /* ToDoTests */,
+				BC4CD27A2108C8BD006E12CB /* ToDoUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BC4CD2792108C8BD006E12CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BC56333A2105CC4C00912BAF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -377,6 +436,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BC4CD2772108C8BD006E12CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC4CD27E2108C8BD006E12CB /* ToDoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BC5633382105CC4C00912BAF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -415,6 +482,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		BC4CD2812108C8BD006E12CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC56333B2105CC4C00912BAF /* ToDo */;
+			targetProxy = BC4CD2802108C8BD006E12CB /* PBXContainerItemProxy */;
+		};
 		BC5633522105CC4E00912BAF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BC56333B2105CC4C00912BAF /* ToDo */;
@@ -442,6 +514,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		BC4CD2822108C8BD006E12CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XY9H4LH9U8;
+				INFOPLIST_FILE = ToDoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bananaland.ToDoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ToDo;
+			};
+			name = Debug;
+		};
+		BC4CD2832108C8BD006E12CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XY9H4LH9U8;
+				INFOPLIST_FILE = ToDoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bananaland.ToDoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ToDo;
+			};
+			name = Release;
+		};
 		BC5633572105CC4E00912BAF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -640,6 +750,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BC4CD2842108C8BD006E12CB /* Build configuration list for PBXNativeTarget "ToDoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC4CD2822108C8BD006E12CB /* Debug */,
+				BC4CD2832108C8BD006E12CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BC5633372105CC4C00912BAF /* Build configuration list for PBXProject "ToDo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
